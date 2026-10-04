@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scenery Swap</title>
+  <link rel="stylesheet" href="../shared/ui.css">
+  <link rel="stylesheet" href="popup.css">
+  <script src="../src/storage.js" defer></script>
+  <script src="popup.js" defer></script>
+</head>
+<body>
+  <header class="brand"><img src="../icons/icon32.png" alt="">Scenery Swap</header>
+  <main>
+    <div class="landscape" aria-hidden="true"></div>
+    <p class="eyebrow">A little change of scenery</p>
+    <h1>Make room for calm.</h1>
+    <label class="switch-label"><input id="enabled" type="checkbox" disabled><span>Replace matching images</span></label>
+    <p id="state" class="muted">Loading settings…</p>
+    <div class="count"><strong id="count">—</strong><span>people configured</span></div>
+    <button id="options" class="primary" type="button">Manage people &amp; scenery <span aria-hidden="true">↗</span></button>
+    <p id="status" class="status" role="status" aria-live="polite"></p>
+    <footer>Local images. No face recognition.</footer>
+  </main>
+</body>
+</html>

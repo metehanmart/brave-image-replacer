@@ -1,0 +1,11 @@
+body { width: 340px; padding: 22px; }
+header { margin-bottom: 20px; }
+.landscape { height: 105px; border-radius: 12px; background: #a1b6a6 url('../assets/nature/mountains.svg') center 55% / cover; margin-bottom: 21px; }
+h1 { font-size: 25px; margin-bottom: 23px; }
+.eyebrow { font-size: 10px; }
+#state { margin: 10px 0 18px; font-size: 12px; }
+.count { display: flex; align-items: baseline; gap: 9px; border-top: 1px solid #dbe3d9; padding: 17px 0; }
+.count strong { font-size: 28px; font-weight: 650; }
+.count span { color: #607469; font-size: 13px; }
+#options { width: 100%; display: flex; justify-content: space-between; }
+footer { font-size: 11px; color: #607469; text-align: center; margin-top: 9px; }

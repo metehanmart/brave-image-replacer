@@ -1,0 +1,4 @@
+Person A | galaxy
+Person B | nature
+Person C | planets
+Person D | random

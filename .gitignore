@@ -1,0 +1,8 @@
+node_modules/
+test-results/
+.browser-test-profile/
+*.zip
+
+# Personal import lists and other private local files.
+/private/
+*.local.txt

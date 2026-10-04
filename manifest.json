@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Scenery Swap",
+  "version": "1.0.0",
+  "description": "Replace images associated with chosen names with peaceful local scenery. No face recognition, tracking, or AI services.",
+  "permissions": ["storage"],
+  "action": {
+    "default_title": "Scenery Swap",
+    "default_popup": "popup/popup.html",
+    "default_icon": {"16": "icons/icon16.png", "32": "icons/icon32.png", "48": "icons/icon48.png", "128": "icons/icon128.png"}
+  },
+  "icons": {"16": "icons/icon16.png", "32": "icons/icon32.png", "48": "icons/icon48.png", "128": "icons/icon128.png"},
+  "options_ui": {"page": "options/options.html", "open_in_tab": true},
+  "content_scripts": [{
+    "matches": ["http://*/*", "https://*/*"],
+    "js": ["src/storage.js", "src/imageCatalog.js", "src/imageMatcher.js", "src/replacementManager.js", "src/content.js"],
+    "run_at": "document_idle",
+    "all_frames": true
+  }],
+  "web_accessible_resources": [{
+    "resources": ["assets/galaxy/*", "assets/nature/*", "assets/planets/*", "assets/forest/*"],
+    "matches": ["http://*/*", "https://*/*"]
+  }],
+  "content_security_policy": {"extension_pages": "script-src 'self'; object-src 'none'"}
+}

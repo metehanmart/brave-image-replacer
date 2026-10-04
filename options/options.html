@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scenery Swap · Options</title>
+  <link rel="stylesheet" href="../shared/ui.css">
+  <link rel="stylesheet" href="options.css">
+  <script src="../src/storage.js" defer></script>
+  <script src="options.js" defer></script>
+</head>
+<body>
+  <header><div class="brand"><img src="../icons/icon32.png" alt="">Scenery Swap</div><span class="eyebrow">Your browsing, a little calmer</span></header>
+  <main>
+    <section class="intro">
+      <div><p class="eyebrow">Your personal view</p><h1>A fresh perspective.</h1><p class="muted">Choose the names. Choose the scenery.<br>Matching images become something you'd rather see.</p></div>
+      <img src="../assets/nature/mountains.svg" alt="Illustrated mountains beneath a golden sun">
+    </section>
+    <section class="card settings"><div><h2>Image replacement</h2><p class="muted">Turning this off restores original images in open webpages.</p></div><label class="switch-label"><input id="enabled" type="checkbox" disabled><span>Enabled</span></label></section>
+    <section aria-labelledby="scenery-heading">
+      <div class="section-title"><h2 id="scenery-heading">Find your scenery</h2><span class="muted">Included, offline &amp; ready to use</span></div>
+      <div class="gallery">
+        <figure><img src="../assets/galaxy/spiral.svg" alt="Purple spiral galaxy"><figcaption>Galaxy <span>Look a little further</span></figcaption></figure>
+        <figure><img src="../assets/nature/meadow.svg" alt="Sunlit meadow"><figcaption>Nature <span>Take a breath</span></figcaption></figure>
+        <figure><img src="../assets/planets/saturn.svg" alt="Ringed planet"><figcaption>Planets <span>A different world</span></figcaption></figure>
+        <figure><img src="../assets/forest/pines.svg" alt="Layered pine forest"><figcaption>Forest <span>Into the green</span></figcaption></figure>
+      </div>
+    </section>
+    <section class="card" aria-labelledby="people-heading">
+      <div class="section-title"><h2 id="people-heading">Your people</h2><span id="count" class="muted">Loading…</span></div>
+      <p class="muted">Use full names for more precise matches. Changes save automatically.</p>
+      <form id="add-form"><fieldset id="add-fields" disabled><div class="add-row"><label>Name<input id="name" maxlength="120" placeholder="e.g. Person A" required autocomplete="off"></label><label>Replacement<select id="category"><option value="random">Random</option><option value="galaxy">Galaxy</option><option value="nature">Nature</option><option value="planets">Planets</option><option value="forest">Forest</option></select></label><button class="primary" type="submit">Add person</button></div></fieldset></form>
+      <p id="empty" class="empty" hidden>No names yet. Add your first person above, or import a text file below.</p>
+      <div class="table-wrap"><table id="people-table" hidden><thead><tr><th scope="col">Active</th><th scope="col">Name</th><th scope="col">Replacement</th><th scope="col"><span class="sr-only">Actions</span></th></tr></thead><tbody id="people"></tbody></table></div>
+    </section>
+    <section class="card import" aria-labelledby="import-heading">
+      <div><h2 id="import-heading">Bring your list</h2><p class="muted">Import a UTF-8 <code>.txt</code> file, one name per line. Names without a category use Random. Existing names keep their settings.</p><pre>Person A
+Person B | nature
+Person C | planets</pre><p class="muted small">Categories: galaxy, nature, planets, forest, random.<br>Blank lines are ignored. Invalid lines are reported before anything is saved.</p></div>
+      <form id="import-form"><fieldset id="import-fields" disabled><label for="import-file">Text file <span class="muted">(up to 1 MB)</span></label><input id="import-file" type="file" accept=".txt,text/plain" required><button type="submit">Import names</button></fieldset></form>
+    </section>
+    <p id="status" class="status" role="status" aria-live="polite"></p>
+    <footer>Text matching only. No facial recognition. No external services.<br>Images can be missed or matched incorrectly when page descriptions are ambiguous.</footer>
+  </main>
+</body>
+</html>
