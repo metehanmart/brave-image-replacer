@@ -2,6 +2,14 @@
 
 A complete, build-free Manifest V3 extension for Brave and Chromium browsers. Replaces images associated with names you choose with locally bundled galaxy, nature, planet, or forest illustrations. Vanilla JavaScript, HTML, and CSS; no facial recognition, remote AI, telemetry, or external image requests.
 
+## Vibe Coding Disclaimer
+
+This project is fully vibe-coded.
+
+I provide the idea and prompts, and AI generates the implementation. I do not manually review or write the code in any meaningful way.
+
+Use at your own risk.
+
 ## Install in Brave
 
 1. Open `brave://extensions`.
